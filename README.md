@@ -1,35 +1,20 @@
 # SubstrateCliby
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/substrate_cliby`. To experiment with that code, run `bin/console` for an interactive prompt.
+This is command line interface for parity substrate(https://github.com/paritytech/substrate).
+Maybe I should write this with language in which more easily cross compile. Rust, Go, Haskell...I'm not sure.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Use specific_install.
 
-```ruby
-gem 'substrate_cliby'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install substrate_cliby
+    $ gem install specific_install
+    $ gem specific_install -l 'git@github.com:kannapoix/substrate-cliby.git'
 
 ## Usage
 
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
+    $ substrate_cliby
+ 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/substrate_cliby.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kannapoix/substrate_cliby.
