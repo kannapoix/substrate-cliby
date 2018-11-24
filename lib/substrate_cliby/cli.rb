@@ -14,37 +14,37 @@ module SubstrateCliby
     desc "chain_getHead", "get header"
     def chain_getHead
       res = post_request URI(@base_uri + '/chain_getHead')
-      puts get_result to_json res
+      puts get_result from_json res
     end
 
     desc "chain_getRuntimeVersion", "get runtime version"
     def chain_getRuntimeVersion
       res = post_request URI(@base_uri + '/chain_getRuntimeVersion')
-      puts get_result to_json res
+      puts get_result from_json res
     end
 
     desc "system_chain", "get chain type"
     def system_chain
       res = post_request URI(@base_uri + '/system_chain')
-      puts get_result to_json res
+      puts get_result from_json res
     end
 
     desc "system_version", "get version"
     def system_version
       res = post_request URI(@base_uri + '/system_version')
-      puts get_result to_json res
+      puts get_result from_json res
     end
 
     desc "system_name", "get name"
     def system_name
       res = post_request URI(@base_uri + '/system_name')
-      puts get_result to_json res
+      puts get_result from_json res
     end
 
     desc "system_properties", "system_properties"
     def system_properties
       res = post_request URI(@base_uri + '/system_properties')
-      puts get_result to_json res
+      puts get_result from_json res
     end
 
     private
@@ -58,12 +58,12 @@ module SubstrateCliby
       end
     end
 
-    def to_json payload
-      JSON.load(payload.body)
+    def from_json payload
+      JSON.load payload.body
     end
 
-    def get_result json
-      json['result']
+    def get_result respond_hash
+      respond_hash['result']
     end
   end
 end
