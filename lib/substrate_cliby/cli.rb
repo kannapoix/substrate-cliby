@@ -6,9 +6,11 @@ require 'thor'
 
 module SubstrateCliby
   class CLI < Thor
+    class_option :node
+
     def initialize *args
       super
-      @base_uri = 'http://localhost:9933'
+      @base_uri = options[:node] ? options[:node] : 'http://localhost:9933'
       @uri = URI @base_uri
       @rpc_version = '2.0'
     end
